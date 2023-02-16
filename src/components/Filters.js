@@ -1,7 +1,7 @@
 import React from 'react'
 import "../stylesheets/Filters.scss";
 
-const Filters = ({ priceFilter, onPriceFilterChange, onSizeFilterChange }) => {
+const Filters = ({ priceFilter, sizeFilter, onPriceFilterChange, onSizeFilterChange }) => {
     return (
         <div className="container">
             <div className="filter-section">
@@ -19,6 +19,7 @@ const Filters = ({ priceFilter, onPriceFilterChange, onSizeFilterChange }) => {
                 <div className="filter-label">Filtrer par taille :</div>
                 <select
                     className="filter-select"
+                    value={sizeFilter}
                     onChange={onSizeFilterChange}
                 >
                     <option value="all">Toutes</option>
