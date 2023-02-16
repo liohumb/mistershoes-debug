@@ -11,6 +11,7 @@ main {
   @media screen and (min-width: v.$md-breakpoint) {
     padding: 4rem;
     display: flex;
+    gap: 2rem;
 
     .container {
       flex-basis: 65%;

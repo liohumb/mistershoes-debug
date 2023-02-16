@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react';
 import Header from '../components/Header';
 import { MdDeleteForever } from "react-icons/md";
 import "../stylesheets/Cart.scss";
+import Offer from '../components/Offer'
 
 const Cart = () => {
     const [products, setProducts] = useState(JSON.parse(localStorage.getItem("cart")) || []);
@@ -26,6 +27,7 @@ const Cart = () => {
         <Fragment>
             <Header />
             <main>
+                <Offer/>
                 <div className="cart">
                     <h1>Mon panier</h1>
                     <table>

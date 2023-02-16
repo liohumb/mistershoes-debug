@@ -4,6 +4,7 @@ import Filters from '../components/Filters'
 import Header from '../components/Header'
 import tabProducts from '../products'
 import { MdContentCopy } from 'react-icons/md'
+import Offer from '../components/Offer'
 
 const Home = () => {
     const [products, setProducts] = useState( tabProducts )
@@ -28,13 +29,7 @@ const Home = () => {
         <Fragment>
             <Header/>
             <main>
-                <div className="special-offers">
-                    <video autoPlay muted loop src={`${process.env.PUBLIC_URL}/spring_days.mp4`}></video>
-                    <div className="offer">
-                        <h2>Spring Days</h2>
-                        <p>-50% sur la 2ème paire avec le code promo :<br/>SPRING <MdContentCopy/></p>
-                    </div>
-                </div>
+                <Offer/>
                 <div className="container">
                     <h2>Liste des produits</h2>
                     <Filters onPriceFilterChange={( e ) => handlePriceFilterChange( e )}
