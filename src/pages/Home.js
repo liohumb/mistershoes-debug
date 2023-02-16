@@ -19,13 +19,10 @@ const Home = () => {
         setSizeFilter( Number( event.target.value ) )
     }
 
-    const filteredProducts = products.filter( ( product ) => {
-        if (priceFilter !== 'all') {
-            product.price <= priceFilter
-        } else {
-            return true
-        }
-    } )
+    // Corection de l'erreur "Expected an assignment or function call and instead saw an expression"
+    const filteredProducts = products.filter(product => {
+        return (priceFilter !== 'all') ? product.price <= priceFilter : true;
+    });
 
     return (
         <Fragment>
