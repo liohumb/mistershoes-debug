@@ -9,7 +9,7 @@ const Cart = () => {
 
     const remove = (index) => {
         products.splice(index, 1);
-        localStorage.setItem("cart", JSON.stringify(products));
+        setProducts(localStorage.setItem("cart", JSON.stringify(products)) || []);
     }
 
     const listProducts = products.map((item, index) => {
