@@ -8,13 +8,15 @@ const Cart = () => {
     const [products, setProducts] = useState(JSON.parse(localStorage.getItem("cart")) || []);
 
     const remove = (index) => {
-        products.splice(index, 1);
-        setProducts(localStorage.setItem("cart", JSON.stringify(products)) || []);
+        const newProducts = [...products];
+        newProducts.splice(index, 1);
+        setProducts(newProducts);
+        localStorage.setItem("cart", JSON.stringify(newProducts));
     }
 
     const listProducts = products.map((item, index) => {
         return (
-            <tr>
+            <tr key={index}>
                 <td><img src={`${process.env.PUBLIC_URL}/img/products/${item.image}`} alt="" /></td>
                 <td>{item.name}</td>
                 <td>{item.price}</td>
