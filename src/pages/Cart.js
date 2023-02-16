@@ -18,7 +18,7 @@ const Cart = () => {
                 <td><img src={`${process.env.PUBLIC_URL}/img/products/${item.image}`} alt="" /></td>
                 <td>{item.name}</td>
                 <td>{item.price}</td>
-                <td><MdDeleteForever className="delete" onClick={() => remove(index)} /></td>
+                <td><MdDeleteForever className="delete" size="2em" onClick={() => remove(index)} /></td>
             </tr>
         )
     })
