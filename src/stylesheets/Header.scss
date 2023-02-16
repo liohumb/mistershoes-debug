@@ -1,0 +1,11 @@
+@use "variables" as v;
+
+header {
+    padding: 0.75rem 1.5rem;
+    border-bottom: 0.3rem solid v.$color-primary;
+    text-align: center;
+
+    img {
+        width: 10rem;
+    }
+}

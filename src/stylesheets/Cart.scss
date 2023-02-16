@@ -1,0 +1,20 @@
+@use "./variables" as v;
+
+.cart {
+    flex-grow: 1;
+}
+
+td {
+    &:first-child {
+        width: 10rem;
+    }
+
+    img {
+        width: 10rem;
+    }
+
+    .delete {
+        cursor: pointer;
+        color: v.$color-danger;
+    }
+}
